@@ -17,6 +17,9 @@ viewportToWorldPoint converts a normalised position on the to a 3D position in w
 
 ## Wave config 
 1 which enemies will be spawned;
+
 2 The path enemies will follow
+
 3 Time between enemy spawns
+
 4 Enemy Movement speed
