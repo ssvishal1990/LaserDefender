@@ -13,6 +13,7 @@ public class EnemySpawner : MonoBehaviour
     
     void Start()
     {
+        currentWave = waveConfigs[0];
         StartCoroutine(spawnEnemy());
         
     }

@@ -15,9 +15,17 @@ public class Player : MonoBehaviour
     [SerializeField] private float paddingTop;
     [SerializeField] private float paddingBottom;
 
+
     Vector2 rawInput;
     Vector2 minBounds;
     Vector2 maxBounds;
+
+    Shooter shooter;
+
+    private void Awake()
+    {
+        shooter = GetComponent<Shooter>();
+    }
     void Start()
     {
         initBounds();
@@ -47,5 +55,16 @@ public class Player : MonoBehaviour
 
     public void moveEvent(InputAction.CallbackContext context){
         rawInput =  context.ReadValue<Vector2>();
+    }
+
+    public void fire(InputAction.CallbackContext context){
+        if(context.started || shooter == null){
+            return;
+        }else if(context.performed){
+            Debug.Log("Enable firing ");
+            shooter.isFiring = true;
+        }else if(context.canceled){
+            shooter.isFiring = false;
+        }
     }
 }
