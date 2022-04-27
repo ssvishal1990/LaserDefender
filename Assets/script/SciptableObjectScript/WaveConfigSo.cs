@@ -11,7 +11,6 @@ public class WaveConfigSo : ScriptableObject
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float timeBetweenEnemySpawns =  1f;
     [SerializeField] float spawnTimeVariance = 0f;
-
     [SerializeField] float minmumSpawnTime = 0.2f;
 
     public int getEnemyCount(){

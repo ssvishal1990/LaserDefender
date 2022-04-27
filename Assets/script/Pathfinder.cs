@@ -28,6 +28,10 @@ public class Pathfinder : MonoBehaviour
 
     private void FollowPath()
     {
+        if(waypoints == null){
+            Debug.Log(" Waypoints going null detected -->  " + waypoints);
+            return;
+        }
         if(waypointsIdx < waypoints.Count){
             Vector3 targetPosition = waypoints[waypointsIdx].position;
             float delta = waveConfig.getMoveSpeed() * Time.deltaTime;

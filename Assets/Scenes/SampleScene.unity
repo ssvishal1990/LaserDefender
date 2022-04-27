@@ -152,7 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179f77b5f58aa4d4eab9a898138daf0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWave: {fileID: 11400000, guid: cf1df1f0d7fefa941a730dfef54e4833, type: 2}
+  waveConfigs:
+  - {fileID: 11400000, guid: cf1df1f0d7fefa941a730dfef54e4833, type: 2}
+  - {fileID: 11400000, guid: c6aba8443dc3ef4448e3a3f51cc2c3fa, type: 2}
+  timeBetweenWaves: 0.2
 --- !u!4 &177759339
 Transform:
   m_ObjectHideFlags: 0
@@ -644,7 +647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8078438575827004397, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5.11
       objectReference: {fileID: 0}
     - target: {fileID: 8078438575827004397, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
       propertyPath: m_LocalPosition.z
