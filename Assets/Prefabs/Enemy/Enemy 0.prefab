@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 499491288940720632}
   - component: {fileID: -9093649023166170647}
   - component: {fileID: 7308862774506078380}
+  - component: {fileID: -296794142962568435}
   m_Layer: 7
   m_Name: Enemy 0
   m_TagString: Untagged
@@ -196,3 +197,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+--- !u!114 &-296794142962568435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7507746263351805136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f90f99d7ffacbe489d45326af405170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 5485687204422394072, guid: 2f50e3f97a0550c43a1c5c6bb1f2f603, type: 3}
+  projecileSpeed: 10
+  projectileLifeTime: 5
+  firingRate: 0.2
+  isEnemy: 1
+  isFiring: 0

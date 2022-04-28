@@ -9,14 +9,18 @@ public class Shooter : MonoBehaviour
     [SerializeField] float projecileSpeed = 10;
     [SerializeField] float projectileLifeTime = 5f;
     [SerializeField] float firingRate = 0.2f;
+
+    [SerializeField] bool isEnemy = false;
     
-    [SerializeField] Transform playerBodyTransform;
+
 
     public bool isFiring;
     Coroutine firingCoroutine;
     void Start()
     {
-        
+        if(isEnemy){
+            isFiring = true;
+        }
     }
 
     void Update()
@@ -41,15 +45,20 @@ public class Shooter : MonoBehaviour
         while(true){
 
             GameObject projectile = Instantiate(projectilePrefab, 
-                                                playerBodyTransform.position, 
-                                                playerBodyTransform.rotation);
+                                                gameObject.transform.position, 
+                                                gameObject.transform.rotation);
             Destroy(projectile, 
                     projectileLifeTime);
 
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
 
             if(rb != null){
-                rb.velocity = transform.up * projecileSpeed;
+                if(isEnemy){
+                    rb.velocity = -1* transform.up  * projecileSpeed;    
+                }else{
+                    rb.velocity = transform.up * projecileSpeed;
+                }
+                
             }
 
             yield return new WaitForSeconds(firingRate);

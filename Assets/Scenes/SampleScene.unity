@@ -345,39 +345,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1482974202 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6831509853040021021, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
-  m_PrefabInstance: {fileID: 7710250363637033492}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1482974206 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1717216242, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
-  m_PrefabInstance: {fileID: 7710250363637033492}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482974202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06ac600a91095a49be3b96365a4208a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1482974209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482974202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f90f99d7ffacbe489d45326af405170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 5485687204422394072, guid: 832f9e118ce39db4caec6c46a258b253, type: 3}
-  projecileSpeed: 10
-  projectileLifeTime: 5
-  firingRate: 0.2
-  isFiring: 0
 --- !u!1 &1635069829
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,34 +607,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4556959730808905762, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556959730808905762, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556959730808905762, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1482974206}
-    - target: {fileID: 4556959730808905762, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556959730808905762, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: fire
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556959730808905762, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Player, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556959730808905762, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6831509853040021021, guid: 88781b0eb80573e4797eacd75c2f3312, type: 3}
       propertyPath: m_Name
       value: Player
