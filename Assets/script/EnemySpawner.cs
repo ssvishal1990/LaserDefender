@@ -28,9 +28,10 @@ public class EnemySpawner : MonoBehaviour
             foreach(WaveConfigSo  config in waveConfigs){
                 currentWave = config;
                 for(int i = 0; i < currentWave.getEnemyCount() ;i++ ){
-                    Instantiate(currentWave.getEnemyPrefab(0), 
+                    GameObject newEnemy =  Instantiate(currentWave.getEnemyPrefab(0), 
                                 currentWave.GetStartingWayPoint().position, 
                                 Quaternion.identity, gameObject.transform);
+                    newEnemy.tag = "Enemy";
                     yield return new WaitForSeconds(currentWave.getRandomSpawnTime());
                 }
                 yield return new WaitForSecondsRealtime(timeBetweenWaves);

@@ -11,11 +11,16 @@ public class HealthScript : MonoBehaviour
     [SerializeField] bool applyCameraShake;
     CameraShake cameraShake;
     Audioplayer audioplayer;
+    ScoreKeeper scoreKeeper;
+
+    int ondamagePoints = 5;
+    int onDestroyPoints = 50;
 
 
     void Awake(){
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioplayer = FindObjectOfType<Audioplayer>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -41,8 +46,14 @@ public class HealthScript : MonoBehaviour
     {        
         if(health - Damage > 0){
             health -= Damage;
+            if(isThisEnemy())scoreKeeper.updateScoreByEnemyDamage(ondamagePoints); 
         }else{
             Destroy(gameObject);
+            if(isThisEnemy()){
+                scoreKeeper.updateScoreByEnemyDamage(ondamagePoints);
+            }else{
+                scoreKeeper.resetScore();
+            }
         }
     }
     
@@ -58,6 +69,17 @@ public class HealthScript : MonoBehaviour
             audioplayer.playDamageTakenClip();
         }
     }
+
+    public int getCurrentHealth(){
+        return health;
+    }
     
+    public bool isThisEnemy(){
+        if(gameObject.tag == "Enemy"){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }
