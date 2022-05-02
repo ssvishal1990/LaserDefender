@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6918784712373990706}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5000
   hitEffect: {fileID: 5366998836892129193, guid: 931cd7f5516a8f94fb6dfb5a93aac145, type: 3}
+  applyCameraShake: 1
 --- !u!114 &1482974209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,9 +247,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5485687204422394072, guid: 832f9e118ce39db4caec6c46a258b253, type: 3}
-  projecileSpeed: 141.4
+  projecileSpeed: 100
   projectileLifeTime: 5
-  baseFiringRate: 0.1
+  baseFiringRate: 0.2
   isEnemy: 0
   firingRateVariance: 0
   minimumFiringRate: 0.1

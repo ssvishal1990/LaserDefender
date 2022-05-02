@@ -10,9 +10,12 @@ public class HealthScript : MonoBehaviour
     DamageDealer damageDealer;
     [SerializeField] bool applyCameraShake;
     CameraShake cameraShake;
+    Audioplayer audioplayer;
+
 
     void Awake(){
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        audioplayer = FindObjectOfType<Audioplayer>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -22,6 +25,7 @@ public class HealthScript : MonoBehaviour
             takeDamage(damageDealer.getDamage());
             playHitEffect();
             ShakeCamera();
+            onDamageSound();
             damageDealer.Hit();
         }
     }
@@ -48,5 +52,12 @@ public class HealthScript : MonoBehaviour
             Destroy(instance.gameObject, instance.main.duration + instance.main.startLifetime.constantMax);
         }
     }
+
+    void onDamageSound(){
+        if(gameObject.tag == "Player"){
+            audioplayer.playDamageTakenClip();
+        }
+    }
+    
 
 }

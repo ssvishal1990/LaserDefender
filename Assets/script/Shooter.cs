@@ -18,6 +18,13 @@ public class Shooter : MonoBehaviour
     [SerializeField] float minimumFiringRate = 0.1f;
     [HideInInspector] public bool isFiring;
     Coroutine firingCoroutine;
+
+    Audioplayer audioplayer;
+
+    private void Awake()
+    {
+        audioplayer = FindObjectOfType<Audioplayer>();
+    }
     void Start()
     {
         if(isEnemy){
@@ -65,6 +72,7 @@ public class Shooter : MonoBehaviour
             float timeToNextProjectile = UnityEngine.Random.Range(baseFiringRate - firingRateVariance, baseFiringRate + firingRateVariance);
             timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFiringRate, float.MaxValue);
 
+            audioplayer.playShootingClip();
             yield return new WaitForSeconds(timeToNextProjectile);
         }
     }
